@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MUME｜家づくりの発信ノート</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/">MUME<span>家づくりの発信ノート</span></a><span class="badge">Instagram · リール</span></header>
+<main><section class="intro"><p class="eyebrow">伝える準備を、もっと軽く。</p><h1>家づくりの悩みに、<br>届く言葉を。</h1><p>参考投稿を整理して、あなたの発信の下書きに。</p><p class="notice">現在はルールによる下書き生成です。AI分析・Instagramからの自動取得は未接続です。</p></section>
+<div class="workspace"><section class="card"><h2>01　参考投稿を入力</h2><form id="form">
+<label for="url">参考投稿のURL <small>任意・記録用</small></label><input id="url" type="url" placeholder="https://www.instagram.com/reel/…" maxlength="2000"><p class="hint">URLから投稿内容は取得しません。文章も入力してください。</p>
+<label for="text">投稿文・動画の文字起こし</label><textarea id="text" required minlength="20" maxlength="12000" rows="8" placeholder="参考になる投稿の文章や、動画で話している内容を貼り付けてください。"></textarea>
+<div class="row"><div><label for="theme">発信テーマ</label><select id="theme"><option value="budget">予算・住宅ローン</option><option value="land">土地選び</option><option value="layout">間取り</option><option value="builder">住宅会社選び</option><option value="regrets">後悔を減らす家づくり</option></select></div><div><label for="duration">動画の長さ</label><select id="duration"><option value="30">約30秒</option><option value="60">約60秒</option></select></div></div>
+<p class="hint">届ける相手：家づくりで悩んでいる方</p><button id="generate" type="submit">分析と下書きを作成 →</button><p id="status" role="status" aria-live="polite"></p></form></section>
+<section class="card output"><h2>02　確認して、あなたの言葉に</h2><div id="empty"><p>ここに分析と台本が表示されます。</p><p class="hint">テーマ別の下書きを、ご自身の経験や情報に合わせて編集してください。</p></div><div id="result" hidden><h3>参考文章の観察</h3><div id="analysis"></div><h3 id="title"></h3><label for="script">リール台本 <small>編集できます</small></label><textarea id="script" rows="12"></textarea><label for="caption">投稿文 <small>編集できます</small></label><textarea id="caption" rows="9"></textarea><h3>投稿前の確認</h3><ul id="checks"></ul><div class="actions"><button id="save" type="button">この端末に保存</button><button id="download" class="secondary" type="button">テキストを書き出す</button></div></div></section></div>
+<section class="card history"><h2>保存した下書き</h2><p class="hint">このブラウザー内に保存します。ほかの端末とは同期されません。</p><div id="history"></div></section></main><footer>MUME · 家づくりの発信を、一歩ずつ。</footer>
+</body></html>
